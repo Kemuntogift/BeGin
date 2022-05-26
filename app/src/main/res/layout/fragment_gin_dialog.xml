@@ -4,4 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/GinLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pick your gin of choice"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="normal|bold"
+        android:layout_marginTop="10dp"
+        android:typeface="monospace"
+        android:gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp">
+
+    </LinearLayout>
 </LinearLayout>

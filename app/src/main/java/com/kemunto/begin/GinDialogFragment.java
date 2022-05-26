@@ -1,10 +1,13 @@
 package com.kemunto.begin;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 
 import androidx.fragment.app.DialogFragment;
@@ -25,6 +28,18 @@ public class GinDialogFragment extends DialogFragment {
 
             @Override
             public void onClick(View v) {
+                dismiss();
+            }
+        });
+
+        RadioGroup surveyRadioGroup = (RadioGroup) rootView.findViewById(R.id.ginRadioGroup); //pull group
+        int selectedId = surveyRadioGroup.getCheckedRadioButtonId(); //get selected ID
+        final RadioButton selectedRadioButton = (RadioButton) rootView.findViewById(selectedId); //get r button val via ID
+        submitButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Log.d("testing", selectedRadioButton.getText().toString());
                 dismiss();
             }
         });
